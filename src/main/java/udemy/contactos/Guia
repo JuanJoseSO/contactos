@@ -1,0 +1,11 @@
+1º. Configuramos la conexion a la BD desde application.properties.
+2º. Pegamos el logback.
+3º. Al haber añadido la dependencia de Timeleaf, se han creado las carpetas:
+     -static: para archivos estáticos, como imágenes.
+     -templates: plantillas de timeleaf, trabajan directamente con html.
+4º.Creamos el index.html en templates y añadimos las urls de boostrap.
+5º. Creamos el paquete modelo y la clase entity contacto
+6º. Paquete repositorio y la interfaz IContactoRepositorio.
+6º. Paquete servicio y la interfaz IContactoServicio y la clase ContactoServicio.
+7º. Paquete controlador y su clase.
+8º. Seperamos los fragmentos de la vista.
