@@ -4,7 +4,7 @@
 </head>
 <body>
 <!--Div es del menu de navegacion-->
-<div th:replace="~{fragmentos/navegacion::navegacion-seccion}"/>
+<div th:replace="~{fragmentos/navegacion::navegacion-seccion}"></div>
 
 <!--Div para desplegar la tabla-->
 <div class="container">
@@ -19,6 +19,7 @@
                 <th scope="col">Nombre</th>
                 <th scope="col">Celular</th>
                 <th scope="col">Email</th>
+                <th></th>
             </tr>
             </thead>
             <tbody>
@@ -27,13 +28,20 @@
                 <td th:text="${contacto.nombre}"></td>
                 <td th:text="${contacto.telefono}"></td>
                 <td th:text="${contacto.email}"></td>
+                <td class="text-center">
+                    <div class="container">
+                        <a th:href="@{/editar/{id}(id=${contacto.idContacto})}" class="btn btn-warning btn-sm me-3">Editar</a>
+                        <a th:href="@{/eliminar/{id}(id=${contacto.idContacto})}" class="btn btn-danger btn-sm me-3">Eliminar</a>
+
+                    </div>
+                </td>
             </tr>
             </tbody>
         </table>
     </div>
 </div>
 
-<div th:replace="~{fragmentos/pie-pagina::pie-pagina-seccion}"/>
+<div th:replace="~{fragmentos/pie-pagina::pie-pagina-seccion}"></div>
 
 </body>
 </html>
