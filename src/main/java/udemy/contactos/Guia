@@ -9,3 +9,9 @@
 6º. Paquete servicio y la interfaz IContactoServicio y la clase ContactoServicio.
 7º. Paquete controlador y su clase.
 8º. Seperamos los fragmentos de la vista.
+10º. Creamos la vista para agregar usuario y añadimos el método al controlador, tanto para abrir como para recibir el objeto.
+11º. Creamos la vista editar y su método en el controlador tanto para **ENVIAR** como para recibir el objeto.
+	*Obtenemos el id del objeto a través de PathVariable y lo buscamos, a continuación, usamos el modelo
+	 para enviar el objeto contacto.
+	*Desde editar obtenemos el objeto contacto con th:object="${contacto}}" para asignando sus parametros a los textfields 
+	 con th:field="*{telefono}". **Se entiende que son atributos del contacto, no hay que poner contacto.atributo.
